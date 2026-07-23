@@ -1,0 +1,12 @@
+{
+  "name": "software-development-clicker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node tests/game.test.mjs && node tests/viewport.test.mjs && node tests/ci-workflow.test.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.54.2"
+  }
+}

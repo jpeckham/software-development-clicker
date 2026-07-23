@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Software Development Clicker</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="header">
+        <div>
+          <p class="eyebrow">Software Development Clicker</p>
+          <h1>Software Development Clicker</h1>
+        </div>
+        <button id="resetButton" class="secondary">Reset</button>
+      </section>
+
+      <section class="dashboard" aria-label="Company dashboard">
+        <div id="stats" class="stats"></div>
+      </section>
+
+      <section class="workbench">
+        <div class="actions">
+          <button id="writeCodeButton" class="primary">Write Code</button>
+          <button id="testButton">Write Unit Tests</button>
+          <button id="debugButton">Debug</button>
+          <button id="refactorButton">Refactor <span id="refactorCooldown"></span></button>
+          <button id="featureButton">Create Feature <span id="featureCost"></span></button>
+          <button id="releaseButton" class="release">Ship Release</button>
+        </div>
+
+        <div class="quality">
+          <div>
+            <span>Coverage</span>
+            <div class="meter"><i id="coverageBar"></i></div>
+          </div>
+          <div>
+            <span>Technical Debt</span>
+            <div class="meter danger"><i id="debtBar"></i></div>
+          </div>
+          <div>
+            <span>Team Morale</span>
+            <div class="meter morale"><i id="moraleBar"></i></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid">
+        <div>
+          <h2>Hiring & Tools</h2>
+          <div id="upgrades" class="upgrades"></div>
+        </div>
+        <div>
+          <h2>Event Log</h2>
+          <ol id="log" class="log"></ol>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="./ui.js"></script>
+  </body>
+</html>
