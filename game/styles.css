@@ -125,10 +125,40 @@ h2 {
   padding: 16px;
 }
 
+.action-groups {
+  display: grid;
+  gap: 14px;
+}
+
+.action-section {
+  min-width: 0;
+}
+
+.action-section h2 {
+  margin-bottom: 8px;
+}
+
 .actions {
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.action-control {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+}
+
+.action-control button {
+  width: 100%;
+}
+
+.action-control small {
+  color: var(--muted);
+  font-size: 0.74rem;
+  line-height: 1.25;
+  min-height: 2.5em;
 }
 
 .primary {
@@ -148,6 +178,26 @@ h2 {
 .quality {
   display: grid;
   gap: 14px;
+}
+
+.pressure {
+  background: #11181c;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  display: grid;
+  gap: 5px;
+  padding: 10px;
+}
+
+.pressure strong {
+  font-size: 0.88rem;
+}
+
+.pressure span {
+  color: var(--muted);
+  display: block;
+  font-size: 0.76rem;
+  margin: 0;
 }
 
 .quality span {
@@ -198,9 +248,19 @@ h2 {
 
 .upgrade {
   align-items: center;
+  background: var(--panel-strong);
+  border: 1px solid var(--line);
+  border-radius: 6px;
   display: flex;
   justify-content: space-between;
+  gap: 10px;
+  min-height: 58px;
+  padding: 10px;
   text-align: left;
+}
+
+.upgrade-copy {
+  min-width: 0;
 }
 
 .upgrade small {
@@ -212,6 +272,23 @@ h2 {
 .price {
   color: var(--yellow);
   white-space: nowrap;
+}
+
+.staffing-controls {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.stepper {
+  align-items: center;
+  display: inline-flex;
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: center;
+  min-height: 34px;
+  padding: 0;
+  width: 34px;
 }
 
 .log {
@@ -262,12 +339,12 @@ h2 {
   }
 
   .shell {
-    padding: 12px 0;
+    padding: 8px 0;
     width: min(1000px, calc(100vw - 20px));
   }
 
   .header {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
   .eyebrow {
@@ -285,8 +362,8 @@ h2 {
   }
 
   .stat {
-    min-height: 58px;
-    padding: 9px;
+    min-height: 52px;
+    padding: 7px;
   }
 
   .stat span {
@@ -299,17 +376,39 @@ h2 {
   }
 
   .workbench {
-    gap: 12px;
-    margin-top: 10px;
-    padding: 10px;
+    gap: 8px;
+    margin-top: 8px;
+    padding: 8px;
+  }
+
+  .action-groups {
+    gap: 8px;
+  }
+
+  .action-section h2 {
+    margin-bottom: 5px;
   }
 
   .actions {
     gap: 8px;
   }
 
+  .action-control small {
+    font-size: 0.68rem;
+    min-height: 0;
+  }
+
   .quality {
     gap: 9px;
+  }
+
+  .pressure {
+    gap: 3px;
+    padding: 8px;
+  }
+
+  .pressure span {
+    font-size: 0.68rem;
   }
 
   .quality span {
@@ -324,11 +423,11 @@ h2 {
   .grid {
     gap: 10px;
     grid-template-columns: 1.25fr 0.75fr;
-    margin-top: 10px;
+    margin-top: 8px;
   }
 
   .grid > div {
-    padding: 10px;
+    padding: 8px;
   }
 
   .upgrades {
@@ -339,6 +438,11 @@ h2 {
   .upgrade {
     align-items: flex-start;
     min-height: 58px;
+  }
+
+  .stepper {
+    min-height: 28px;
+    width: 28px;
   }
 
   .upgrade small,

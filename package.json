@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "dev": "node scripts/serve-game.mjs",
     "test": "node tests/game.test.mjs && node tests/viewport.test.mjs && node tests/ci-workflow.test.mjs"
   },
   "devDependencies": {

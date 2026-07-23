@@ -21,16 +21,52 @@
       </section>
 
       <section class="workbench">
-        <div class="actions">
-          <button id="writeCodeButton" class="primary">Write Code</button>
-          <button id="testButton">Write Unit Tests</button>
-          <button id="debugButton">Debug</button>
-          <button id="refactorButton">Refactor <span id="refactorCooldown"></span></button>
-          <button id="featureButton">Create Feature <span id="featureCost"></span></button>
-          <button id="releaseButton" class="release">Ship Release</button>
+        <div class="action-groups">
+          <div class="action-section">
+            <h2>Develop and Ship</h2>
+            <div class="actions">
+              <div class="action-control">
+                <button id="writeCodeButton" class="primary">Write Code</button>
+                <small id="writeCodeHelp"></small>
+              </div>
+              <div class="action-control">
+                <button id="featureButton">Create Feature <span id="featureCost"></span></button>
+                <small id="featureHelp"></small>
+              </div>
+              <div class="action-control">
+                <button id="releaseButton" class="release">Ship Release</button>
+                <small id="releaseHelp"></small>
+              </div>
+            </div>
+          </div>
+
+          <div class="action-section">
+            <h2>Improve Quality</h2>
+            <div class="actions">
+              <div class="action-control">
+                <button id="debugButton">Fix Bugs</button>
+                <small id="debugHelp"></small>
+              </div>
+              <div class="action-control">
+                <button id="testButton">Write Unit Tests</button>
+                <small id="testHelp"></small>
+              </div>
+              <div class="action-control">
+                <button id="refactorButton">Refactor <span id="refactorCooldown"></span></button>
+                <small id="refactorHelp"></small>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="quality">
+          <div class="pressure" aria-label="Current pressure">
+            <strong>Current Pressure</strong>
+            <span id="featurePressure"></span>
+            <span id="debtPressure"></span>
+            <span id="releasePressure"></span>
+            <span id="coveragePressure"></span>
+          </div>
           <div>
             <span>Coverage</span>
             <div class="meter"><i id="coverageBar"></i></div>

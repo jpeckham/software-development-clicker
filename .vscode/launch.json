@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Game in Chrome",
+      "type": "pwa-chrome",
+      "request": "launch",
+      "url": "http://127.0.0.1:4173/",
+      "webRoot": "${workspaceFolder}/game",
+      "preLaunchTask": "Serve game",
+      "sourceMaps": true
+    },
+    {
+      "name": "Debug Game in Edge",
+      "type": "pwa-msedge",
+      "request": "launch",
+      "url": "http://127.0.0.1:4173/",
+      "webRoot": "${workspaceFolder}/game",
+      "preLaunchTask": "Serve game",
+      "sourceMaps": true
+    }
+  ]
+}
