@@ -9,13 +9,17 @@ const requiredSnippets = [
   'push:',
   'branches: [ main ]',
   'workflow_dispatch:',
-  'npm ci',
-  'npx playwright install chromium',
-  'npm test',
+  'contents: write',
+  'uses: jpeckham/.github/.github/workflows/continuous-delivery-itch-html5.yml@main',
+  'main_branch: main',
+  'node_version: "24"',
+  'game_dir: game',
+  'test_command: npm test',
+  'version.json',
+  'artifact_name_prefix: software-development-clicker',
+  'itch_target: jheredparnell/software-development-clicker:html5',
   'BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }}',
-  'scripts/Publish-ItchGame.ps1',
-  'jheredparnell/software-development-clicker:html5',
-  'v0.1.${{ github.run_number }}-${{ github.sha }}'
+  'secrets:'
 ];
 
 for (const snippet of requiredSnippets) {
@@ -24,10 +28,5 @@ for (const snippet of requiredSnippets) {
     `expected workflow to include ${JSON.stringify(snippet)}`
   );
 }
-
-assert.ok(
-  workflow.includes('if: github.event_name == \'workflow_dispatch\' || github.ref == \'refs/heads/main\''),
-  'expected deploy job to run only on main or manual dispatch'
-);
 
 console.log('ci workflow test passed');
